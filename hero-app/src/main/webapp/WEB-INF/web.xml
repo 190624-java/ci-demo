@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>hero-app</display-name>
+  <servlet>
+    <description></description>
+    <display-name>HeroServlet</display-name>
+    <servlet-name>HeroServlet</servlet-name>
+    <servlet-class>com.revature.servlets.HeroServlet</servlet-class>
+    
+    <!-- to have a servlet eagerly initialized -->
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HeroServlet</servlet-name>
+    <url-pattern>/app/hero/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginServlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.revature.servlets.LoginServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+  	<filter-name>authFilter</filter-name>
+  	<filter-class>com.revature.filters.AuthenticationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>authFilter</filter-name>
+  	<url-pattern>/app/*</url-pattern>
+  </filter-mapping>
+  
+  <!-- If we want to determine how long a session should last -->
+  <session-config>
+  	<!-- 5 minute session timeout -->
+  	<session-timeout>5</session-timeout>
+  </session-config>
+</web-app>
