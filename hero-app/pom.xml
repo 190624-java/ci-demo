@@ -24,6 +24,7 @@
 		</pluginManagement>
 	</build>
 
+	<!-- Pushing this comment will trigger a Jenkins build -->
 	<dependencies>
 		<!-- 
 		<dependency>
