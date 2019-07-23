@@ -1,4 +1,4 @@
-var baseURL = 'http://http://34.238.71.23:8080/hero-app/';
+var baseURL = 'http://34.238.71.23:8080/hero-app/';
 var heroes = [];
 
 document.getElementById("load").onclick = () => {
