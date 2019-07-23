@@ -24,8 +24,8 @@ public class HeroServlet extends HttpServlet {
 	public void init() throws ServletException {
 		System.out.println("Hero Servlet Ready To Go!");
 		try {
-			//this.dao = new HeroDAOImplDB();
-			this.dao = new HeroDAOImplStatic();
+			this.dao = new HeroDAOImplDB();
+			//this.dao = new HeroDAOImplStatic();
 		} catch (Exception e) {
 			System.out.println("A " + e.getClass() + " exception occurred!");
 			e.printStackTrace();
@@ -62,13 +62,13 @@ public class HeroServlet extends HttpServlet {
 
 	@Override
 	public void destroy() {
-		/*
-		 * HeroDAOImplDB dao2 = (HeroDAOImplDB) dao; 
-		 * try {
-		 * 		dao2.getDBConnection().close(); 
-		 * } catch (SQLException e) {
-		 * 		e.printStackTrace();
-		 * }
-		 */
+		
+		  HeroDAOImplDB dao2 = (HeroDAOImplDB) dao; 
+		  try {
+		  		dao2.getDBConnection().close(); 
+		  } catch (SQLException e) {
+		  		e.printStackTrace();
+		  }
+		 
 	}
 }
