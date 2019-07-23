@@ -9,6 +9,7 @@
 	<name>Hero-App</name>
 
 	<build>
+	<finalName>hero-app</finalName>
 		<pluginManagement>
 			<plugins>
 				<plugin>
