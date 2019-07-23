@@ -35,7 +35,7 @@ public class HeroServlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			if (request.getRequestURI().contains("all")) {
-				System.out.println("contains all");
+				//System.out.println("contains all");
 				// get heroes from db
 				List<Hero> allHeroes = dao.getAllHeroes();
 				ObjectMapper mapper = new ObjectMapper();
