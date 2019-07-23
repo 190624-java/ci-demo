@@ -45,7 +45,7 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>2.9.9.1</version>
 		</dependency>
-		<dependendy>
+		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</groupId>
 			<version>3.1.0</version>
